@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: zuul-service
+server:
+  port: 7000
+zuul:
+  routes:
+      serv-films: # Service to create as sample
+        path: /films-service/** #path that will be intercepted
+        serviceId: films-service
+      serv-search:
+        path: /search-service/** #path
+        serviceId: search-service
+
+eureka:                  
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

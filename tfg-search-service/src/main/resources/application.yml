@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: search-service
+ 
+server: 
+  port: 9000
+# Config de el servidor  
+eureka: 
+  client:
+    serviceUrl:
+      # Direccion a la que se conecta el microservicio con eureka
+      defaultZone: http://localhost:8761/eureka
