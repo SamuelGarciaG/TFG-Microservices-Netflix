@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import model.Film;
+import model.ObjectSearch;
 import service.SearchService;
 
 @CrossOrigin(origins="*")
@@ -20,8 +20,13 @@ public class SearchController {
 	SearchService service;
 	
 	@GetMapping(value="genre/{genretosearch}", produces=MediaType.APPLICATION_JSON_VALUE)
-	public List<Film> getGenre(@PathVariable("genretosearch") String genre) {
+	public List<ObjectSearch> getGenre(@PathVariable("genretosearch") String genre) {
 		return this.service.getGenre(genre);
+	}
+	
+	@GetMapping(value="name/{nametosearch}", produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<ObjectSearch> getName(@PathVariable("nametosearch") String name) {
+		return this.service.getName(name);
 	}
 
 }

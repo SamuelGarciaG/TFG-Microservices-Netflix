@@ -5,12 +5,18 @@ server:
   port: 7000
 zuul:
   routes:
-      serv-films: # Service to create as sample
-        path: /films-service/** #path that will be intercepted
+      serv-films: 
+        path: /films-service/** 
         serviceId: films-service
+      serv-series: 
+        path: /series-service/** 
+        serviceId: series-service
       serv-search:
-        path: /search-service/** #path
+        path: /search-service/** 
         serviceId: search-service
+      serv-review:
+        path: /review-service/**
+        serviceId: review-service
 
 eureka:                  
   client:

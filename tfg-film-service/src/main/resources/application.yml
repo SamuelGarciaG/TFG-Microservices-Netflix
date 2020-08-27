@@ -3,7 +3,7 @@ spring:
     name: films-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/tfg?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/films?serverTimezone=UTC
     username: root
     password: 62216221
   jpa:
@@ -12,7 +12,7 @@ spring:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 server: 
-  port: 8000
+  port: 8001
 # Config de el servidor  
 eureka: 
   client:

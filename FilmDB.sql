@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `tfg` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `tfg`;
+CREATE DATABASE  IF NOT EXISTS `films` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `films`;
 -- MySQL dump 10.13  Distrib 8.0.21, for macos10.15 (x86_64)
 --
--- Host: localhost    Database: tfg
+-- Host: localhost    Database: films
 -- ------------------------------------------------------
 -- Server version	8.0.21
 
@@ -18,7 +18,7 @@ USE `tfg`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `film`
+-- Table structure for table `films`
 --
 
 DROP TABLE IF EXISTS `film`;
@@ -34,12 +34,12 @@ CREATE TABLE `film` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `film`
+-- Dumping data for table `films`
 --
 
 LOCK TABLES `film` WRITE;
 /*!40000 ALTER TABLE `film` DISABLE KEYS */;
-INSERT INTO `film` VALUES (0,'prueba','prueba',0);
+INSERT INTO `film` VALUES (0,'pruebafilm','prueba',0);
 /*!40000 ALTER TABLE `film` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

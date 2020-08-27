@@ -20,6 +20,11 @@ public class ServiceFilmsImpl implements ServiceFilms{
 		return films;
 	}
 	
+	@Override
+	public Film getFilmByName(String name) {
+		Film film = dao.getFilmByName(name);
+		return film;
+	}
 	//return hoteles.stream().filter(t->t.getDisponible()==1).collect(Collectors.toList());
 
 	

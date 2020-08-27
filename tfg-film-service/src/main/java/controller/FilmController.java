@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import model.Film;
@@ -19,8 +20,13 @@ public class FilmController {
 	ServiceFilms service;
 	
 	@GetMapping (value ="films", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Film> devolverHoteles () {
+	public List<Film> getFilms () {
 		return service.getFilms();
+	}
+	
+	@GetMapping (value = "films/{filmname}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Film getFilmByName(@PathVariable("filmname") String name) {
+		return service.getFilmByName(name);
 	}
 
 }

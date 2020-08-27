@@ -1,11 +1,11 @@
 package service;
 
 import java.util.List;
-
-import model.Film;
+import model.ObjectSearch;
 
 public interface SearchService {
 	
-	List<Film> getFilms();
-	List<Film> getGenre(String genre);
+	List<ObjectSearch> getResults();
+	List<ObjectSearch> getGenre(String genre);
+	List<ObjectSearch> getName(String name);
 }

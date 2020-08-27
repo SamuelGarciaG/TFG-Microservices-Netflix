@@ -7,5 +7,6 @@ import model.Film;
 public interface FilmDao {
 	
 	public List<Film> getFilms();
+	public Film getFilmByName(String name);
 
 }
