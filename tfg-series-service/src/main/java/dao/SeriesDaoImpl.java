@@ -22,4 +22,14 @@ public class SeriesDaoImpl implements SeriesDao {
 		return series.findByName(name);
 	}
 
+	@Override
+	public Series getSeriesById(Integer id) {
+		return series.findByIdseries(id);
+	}
+
+	@Override
+	public List<Series> getSeriesByGenre(String genre) {
+		return series.findByGenre(genre);
+	}
+
 }

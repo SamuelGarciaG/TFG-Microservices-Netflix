@@ -25,10 +25,22 @@ public class SeriesController {
 		return service.getSeries();
 	}
 	
-	@GetMapping (value ="series/{seriesname}", produces = MediaType.APPLICATION_JSON_VALUE)
+	
+	@GetMapping (value ="series/name/{seriesname}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Series getSeriesByName(@PathVariable("seriesname") String name){
 		return service.getSeriesByName(name);
 	}
+
+	@GetMapping (value = "series/{seriesid}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Series getSeriesById(@PathVariable("seriesid") Integer id) {
+		return service.getSeriesById(id);
+	}
+	
+	@GetMapping (value ="series/genre/{genrename}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Series> getFilmsByGenre(@PathVariable("genrename") String genre) {
+		return service.getSeriesByGenre(genre);
+	}
+	
 
 
 }

@@ -8,5 +8,7 @@ public interface FilmDao {
 	
 	public List<Film> getFilms();
 	public Film getFilmByName(String name);
+	public Film getFilmById(Integer id);
+	public List<Film> getFilmByGenre(String genre);
 
 }

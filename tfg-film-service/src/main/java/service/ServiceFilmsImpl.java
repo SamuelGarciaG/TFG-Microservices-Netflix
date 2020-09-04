@@ -25,7 +25,17 @@ public class ServiceFilmsImpl implements ServiceFilms{
 		Film film = dao.getFilmByName(name);
 		return film;
 	}
-	//return hoteles.stream().filter(t->t.getDisponible()==1).collect(Collectors.toList());
+
+	@Override
+	public List<Film> getFilmsByGenre(String genre) {
+		List<Film> films = dao.getFilmByGenre(genre);
+		return films;
+	}
+
+	@Override
+	public Film getFilmById(Integer id) {
+		return dao.getFilmById(id);
+	}
 
 	
 

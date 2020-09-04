@@ -24,9 +24,20 @@ public class FilmController {
 		return service.getFilms();
 	}
 	
-	@GetMapping (value = "films/{filmname}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping (value = "films/name/{filmname}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Film getFilmByName(@PathVariable("filmname") String name) {
 		return service.getFilmByName(name);
 	}
+	
+	@GetMapping (value = "films/{filmid}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Film getFilmById(@PathVariable("filmid") Integer id) {
+		return service.getFilmById(id);
+	}
+	
+	@GetMapping (value ="films/genre/{genrename}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Film> getFilmsByGenre(@PathVariable("genrename") String genre) {
+		return service.getFilmsByGenre(genre);
+	}
+	
 
 }

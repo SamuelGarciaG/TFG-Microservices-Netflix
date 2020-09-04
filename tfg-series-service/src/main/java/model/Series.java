@@ -19,6 +19,26 @@ public class Series implements Serializable{
 
 	private String name;
 
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+
+	public String getUrlimg() {
+		return urlimg;
+	}
+
+	public void setUrlimg(String urlimg) {
+		this.urlimg = urlimg;
+	}
+
+	private String summary;
+	
+	private String urlimg;
+	
 	public Series() {
 	}
 	

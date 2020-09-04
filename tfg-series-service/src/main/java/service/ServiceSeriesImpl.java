@@ -25,4 +25,14 @@ public class ServiceSeriesImpl implements ServiceSeries {
 		Series series = dao.getSeriesByName(name);
 		return series;
 	}
+
+	@Override
+	public Series getSeriesById(Integer id) {
+		return dao.getSeriesById(id);
+	}
+
+	@Override
+	public List<Series> getSeriesByGenre(String genre) {
+		return dao.getSeriesByGenre(genre);
+	}
 }

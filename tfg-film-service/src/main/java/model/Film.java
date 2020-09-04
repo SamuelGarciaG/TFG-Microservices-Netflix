@@ -19,8 +19,21 @@ public class Film implements Serializable {
 	private String genre;
 
 	private String name;
+	
+	private String summary;
+	
 
+	private String urlimg;
+	
 	public Film() {
+	}
+	
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 
 	public int getIdfilm() {
@@ -54,5 +67,15 @@ public class Film implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public String getUrlimg() {
+		return urlimg;
+	}
+
+	public void setUrlimg(String urlimg) {
+		this.urlimg = urlimg;
+	}
+
+
 
 }

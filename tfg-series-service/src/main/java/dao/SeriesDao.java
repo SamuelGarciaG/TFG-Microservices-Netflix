@@ -8,5 +8,7 @@ public interface SeriesDao {
 	
 	public List<Series> getSeries();
 	public Series getSeriesByName(String name);
+	public Series getSeriesById(Integer id);
+	public List<Series> getSeriesByGenre(String genre);
 
 }
