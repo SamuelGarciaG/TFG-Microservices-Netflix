@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<section>
+    <h3 class = "notes">All Films</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let film of filmsArray' class="slide">
+            <button class="button" (click)="goTo(film)">
+                <img class="slick-slide" src="{{film.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <h3 class = "notes">Action Films</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let film of filmsActionArray' class="slide">
+            <button class="button" (click)="goTo(film)">
+                <img class="slick-slide" src="{{film.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <router-outlet></router-outlet>
