@@ -4,12 +4,15 @@
     margin-left: 30px;
     height: 304px;
     width: 542px;
+    padding-top: 60px;
 }
 
 .title{
     margin-left: 30px;
     margin-bottom: 10px;
     font-size: 40px;
+    padding-top: 80px;
+
 }
 
 .info{

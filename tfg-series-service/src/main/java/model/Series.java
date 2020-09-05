@@ -18,26 +18,13 @@ public class Series implements Serializable{
 	private String genre;
 
 	private String name;
-
-	public String getSummary() {
-		return summary;
-	}
-
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
-
-	public String getUrlimg() {
-		return urlimg;
-	}
-
-	public void setUrlimg(String urlimg) {
-		this.urlimg = urlimg;
-	}
-
+	
+	private int seasons;
+	
 	private String summary;
 	
 	private String urlimg;
+	
 	
 	public Series() {
 	}
@@ -72,6 +59,30 @@ public class Series implements Serializable{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+
+	public String getUrlimg() {
+		return urlimg;
+	}
+
+	public void setUrlimg(String urlimg) {
+		this.urlimg = urlimg;
+	}
+
+	public int getSeasons() {
+		return seasons;
+	}
+
+	public void setSeasons(int seasons) {
+		this.seasons = seasons;
 	}
 
 }

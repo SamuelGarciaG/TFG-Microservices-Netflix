@@ -25,4 +25,5 @@ export class SeriesService {
     return this.http.get<Series[]>(url);
   }
 
+  
 }

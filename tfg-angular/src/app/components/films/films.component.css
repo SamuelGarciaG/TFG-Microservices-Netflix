@@ -7,7 +7,9 @@
 .notes{
   margin-left: 46px;
 }
-  
+.notes1{
+  padding-top: 80px;
+}
   .slick-slide{
     transition-duration: 0.5s;
     border-radius: 20px;

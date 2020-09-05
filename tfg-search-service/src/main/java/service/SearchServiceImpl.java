@@ -26,20 +26,14 @@ public class SearchServiceImpl implements SearchService {
 		ObjectSearch[] resultado = (ObjectSearch[]) ArrayUtils.addAll(films, series);
 		return Arrays.asList(resultado);
 	}
-	
+
 	@Override
-	public List<ObjectSearch> getGenre(String genre){
+	public List<ObjectSearch> getFiltered(String search){
 		return getResults()
 				.stream()
-				.filter(o->o.getGenre().contains(genre))
+				.filter(o->o.getGenre().contains(search)||o.getName().contains(search))
 				.collect(Collectors.toList());
 	}
-	
-	@Override
-	public List<ObjectSearch> getName(String name){
-		return getResults()
-				.stream()
-				.filter(o->o.getName().contains(name))
-				.collect(Collectors.toList());
-	}
+
+
 }

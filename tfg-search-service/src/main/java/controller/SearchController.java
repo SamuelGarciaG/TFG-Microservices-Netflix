@@ -15,18 +15,14 @@ import service.SearchService;
 @CrossOrigin(origins="*")
 @RestController
 public class SearchController {
-	
+
 	@Autowired
 	SearchService service;
-	
-	@GetMapping(value="genre/{genretosearch}", produces=MediaType.APPLICATION_JSON_VALUE)
-	public List<ObjectSearch> getGenre(@PathVariable("genretosearch") String genre) {
-		return this.service.getGenre(genre);
+
+	@GetMapping(value="{datatosearch}", produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<ObjectSearch> getGenre(@PathVariable("datatosearch") String search) {
+		return this.service.getFiltered(search);
 	}
 	
-	@GetMapping(value="name/{nametosearch}", produces=MediaType.APPLICATION_JSON_VALUE)
-	public List<ObjectSearch> getName(@PathVariable("nametosearch") String name) {
-		return this.service.getName(name);
-	}
 
 }

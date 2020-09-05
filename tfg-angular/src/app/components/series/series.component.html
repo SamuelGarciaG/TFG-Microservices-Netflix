@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <section>
-    <h3 class = "notes">All Series</h3>
+    <h3 class = "notes1">All Series</h3>
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor='let series of seriesArray' class="slide">
             <button class="button" (click)="goTo(series)">

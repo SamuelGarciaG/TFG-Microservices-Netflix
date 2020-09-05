@@ -1,6 +1,10 @@
 export interface Object {
-    id: number;
+    idseries: number;
+    idfilm: number;
     name: string;
     genre: string;
-    cover: string;
+    duration: number;
+    seasons: number;
+    summary: string;
+    urlimg: string;
 }
