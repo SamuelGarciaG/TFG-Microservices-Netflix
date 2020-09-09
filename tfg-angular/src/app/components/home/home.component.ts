@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
     this.getFilms();
     this.getSeries();
   }
+  
   getSeries() {
     this.seriesService.getSeries()
     .subscribe(series => this.seriesArray = series);

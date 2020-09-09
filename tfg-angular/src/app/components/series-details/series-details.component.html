@@ -1,11 +1,23 @@
-<link rel="shortcut icon" href="">
-<div>
-    <img class="slide" src="{{series.urlimg}}">
-</div>
-<div>
-    <p class="title" >{{series.name}}</p>
-</div>
-<a class="active" (click)="NewTab()">Watch Trailer</a>
-<div>
-    <p class="info" >{{series.duration}} min • {{series.genre}}</p>
-</div>
+<ng-container *ngIf="reviews">
+    <div>
+        <img class="slide" src="{{series.urlimg}}">
+    </div>
+    <div>
+        <p class="title" >{{series.name}}</p>
+    </div>
+    <div>
+        <p class="summary" >{{series.summary}}</p>
+    </div>
+    <a class="active" (click)="NewTab()">Watch Trailer</a>
+    <div>
+        <p class="info" >{{series.duration}} min per episode • {{series.genre}} • 
+            {{series.seasons}} seasons • {{series.episodes}} episodes per season • 
+            {{series.year}} • {{series.rating}}/10</p>
+    </div>
+    </ng-container>
+    <ng-container *ngIf="reviews">
+    <div *ngFor='let review of reviews' class="reviews">
+        <p> Hola soy {{review.user}}</p>
+        <p> {{review.comment}} </p>
+    </div>
+</ng-container>

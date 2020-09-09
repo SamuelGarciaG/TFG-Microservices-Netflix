@@ -12,14 +12,18 @@
     margin-bottom: 10px;
     font-size: 40px;
     padding-top: 80px;
-
+}
+.summary{
+    position: absolute;
+    width: 30%;
+    top: 180px;
+    right: 250px;
 }
 
 .info{
     margin-left: 30px;
     font-size: 12px;
     font-weight: lighter;
-
 }
 
 .active {

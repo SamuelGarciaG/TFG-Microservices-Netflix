@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
 
@@ -20,10 +21,19 @@ public class Film implements Serializable {
 
 	private String name;
 	
-	private String summary;
+	private int year;
 	
+	private String director;
+
+	private float rating;
+
+	private String summary;
 
 	private String urlimg;
+
+	private String urltrailer;
+
+	private String reviews;
 	
 	public Film() {
 	}
@@ -76,6 +86,44 @@ public class Film implements Serializable {
 		this.urlimg = urlimg;
 	}
 
+	public String getUrltrailer() {
+		return urltrailer;
+	}
 
+	public void setUrltrailer(String urltrailer) {
+		this.urltrailer = urltrailer;
+	}
+
+	public float getRating() {
+		return rating;
+	}
+
+	public void setRating(float rating) {
+		this.rating = rating;
+	}
+
+	public String getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(String reviews) {
+		this.reviews = reviews;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
 
 }

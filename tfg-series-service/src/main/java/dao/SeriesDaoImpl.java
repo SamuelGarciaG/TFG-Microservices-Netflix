@@ -27,9 +27,4 @@ public class SeriesDaoImpl implements SeriesDao {
 		return series.findByIdseries(id);
 	}
 
-	@Override
-	public List<Series> getSeriesByGenre(String genre) {
-		return series.findByGenre(genre);
-	}
-
 }

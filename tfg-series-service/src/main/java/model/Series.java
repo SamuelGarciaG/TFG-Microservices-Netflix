@@ -18,14 +18,23 @@ public class Series implements Serializable{
 	private String genre;
 
 	private String name;
+
+	private int year;
 	
+	private int episodes;
+
 	private int seasons;
 	
+	private float rating;
+	
 	private String summary;
-	
+
 	private String urlimg;
+
+	private String urltrailer;
 	
-	
+	private String reviews;
+
 	public Series() {
 	}
 	
@@ -85,4 +94,45 @@ public class Series implements Serializable{
 		this.seasons = seasons;
 	}
 
+	public int getEpisodes() {
+		return episodes;
+	}
+
+	public void setEpisodes(int episodes) {
+		this.episodes = episodes;
+	}
+
+	public String getUrltrailer() {
+		return urltrailer;
+	}
+
+	public void setUrltrailer(String urltrailer) {
+		this.urltrailer = urltrailer;
+	}
+
+	public float getRating() {
+		return rating;
+	}
+
+	public void setRating(float rating) {
+		this.rating = rating;
+	}
+
+	public String getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(String reviews) {
+		this.reviews = reviews;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	
 }

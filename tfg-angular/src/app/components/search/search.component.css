@@ -1,8 +1,9 @@
 .content{
-  width: 99%;
+  width: 97%;
+  left: 3%;
   position: absolute;
   padding-top: 200px;
-  justify-content: center;
+  justify-content: left;
 }
 
 .mat-card-image:first-child{
@@ -32,14 +33,15 @@
 .searchBar{
   width: 100vw;
   top: 75px;
-  font-size: 44px;
+  font-size: 40px;
   height: 75px;
   letter-spacing: 1.17px;
   padding-left: calc(24px + 3.5vw);
   position: fixed;
   left: 0px;
   z-index: 6;
-  background-color: rgb(158, 157, 155);
+  background-color: rgba(158, 157, 155, 0.685);
   outline: none;
   border: medium none;
+  font-family: "Arial Black", Gadget, sans-serif;
 }

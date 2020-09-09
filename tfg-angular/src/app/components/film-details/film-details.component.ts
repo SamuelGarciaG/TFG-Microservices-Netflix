@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FilmService } from 'src/app/services/films.service';
 import { Film } from 'src/app/model/film';
+import { Review } from 'src/app/model/review';
+import { callbackify } from 'util';
 
 @Component({
   selector: 'app-film-details',
@@ -11,7 +13,7 @@ import { Film } from 'src/app/model/film';
 export class FilmDetailsComponent implements OnInit {
 
   film: Film;
-
+  reviews: Review[];
   constructor(private filmService: FilmService, private route: ActivatedRoute) { }
 
 
@@ -20,11 +22,22 @@ export class FilmDetailsComponent implements OnInit {
     console.log(id);
     this.filmService.getFilmById(id)
       .subscribe(films => this.film = films);
+    this.call();
   }
 
   NewTab() { 
     window.open( 
-      "https://www.youtube.com/");
+    this.film.urltrailer);
 }
+
+  async call(){
+    await this.delay(300);
+    this.reviews = JSON.parse(this.film.reviews);
+  }
+
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
 
 }

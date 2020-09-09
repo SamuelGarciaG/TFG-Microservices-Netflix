@@ -18,7 +18,7 @@ public class SearchServiceImpl implements SearchService {
 	RestTemplate template;
 	String urlFilm = "http://films-service";
 	String urlSeries = "http://series-service";
-	
+
 	@Override
 	public List<ObjectSearch> getResults(){
 		ObjectSearch[] films = template.getForObject(urlFilm + "/films", ObjectSearch[].class);
@@ -34,6 +34,5 @@ public class SearchServiceImpl implements SearchService {
 				.filter(o->o.getGenre().contains(search)||o.getName().contains(search))
 				.collect(Collectors.toList());
 	}
-
 
 }

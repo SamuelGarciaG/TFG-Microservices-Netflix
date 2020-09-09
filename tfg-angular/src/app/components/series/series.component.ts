@@ -31,7 +31,7 @@ export class SeriesComponent implements OnInit {
   getSeries(): void {
     this.seriesService.getSeries()
     .subscribe(series => this.seriesArray = series);
-    this.seriesService.getSeriesByGenre("accion")
+    this.seriesService.getSeriesByGenre("drama")
     .subscribe(seriesA => this.seriesActionArray = seriesA)
   }
 

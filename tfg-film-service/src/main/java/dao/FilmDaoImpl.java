@@ -23,11 +23,6 @@ public class FilmDaoImpl implements FilmDao {
 	}
 
 	@Override
-	public List<Film> getFilmByGenre(String genre) {
-		return films.findByGenre(genre);
-	}
-
-	@Override
 	public Film getFilmById(Integer id) {
 		return films.findByIdfilm(id);
 	}

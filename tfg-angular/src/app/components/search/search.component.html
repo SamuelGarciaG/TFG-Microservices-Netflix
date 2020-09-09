@@ -1,7 +1,8 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<input class="searchBar" [(ngModel)]="searchTerm" (ngModelChange)="onSearchTermChange()" />
+<input class="searchBar" placeholder="Introduce título o género" 
+[(ngModel)]="searchTerm" (ngModelChange)="onSearchTermChange()" />
 
 <section>
     <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">

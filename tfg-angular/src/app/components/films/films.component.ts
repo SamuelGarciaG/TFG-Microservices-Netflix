@@ -31,7 +31,7 @@ export class FilmsComponent implements OnInit {
   getFilms(): void {
     this.filmService.getFilms()
     .subscribe(films => this.filmsArray = films);
-    this.filmService.getFilmsByGenre("accion")
+    this.filmService.getFilmsByGenre("drama")
     .subscribe(filmsA => this.filmsActionArray = filmsA)
   }
 
