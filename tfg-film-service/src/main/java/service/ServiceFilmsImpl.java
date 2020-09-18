@@ -24,7 +24,6 @@ public class ServiceFilmsImpl implements ServiceFilms{
 	
 	String urlReviews = "http://review-service/review/";
 	
-	
 	@Override
 	public List<Film> getFilms() {
 		List<Film> films = dao.getFilms();

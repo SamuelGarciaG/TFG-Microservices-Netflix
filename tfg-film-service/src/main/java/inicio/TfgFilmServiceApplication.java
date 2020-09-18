@@ -18,7 +18,7 @@ public class TfgFilmServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TfgFilmServiceApplication.class, args);
 	}
-	
+
     @Bean(value = "restTemplate")
     @LoadBalanced
 	public RestTemplate template() {
