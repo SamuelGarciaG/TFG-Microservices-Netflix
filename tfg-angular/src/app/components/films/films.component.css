@@ -1,0 +1,38 @@
+.slick-slider {
+    width: 95%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0);
+  }
+
+.notes{
+  margin-left: 46px;
+}
+.notes1{
+  padding-top: 80px;
+}
+  .slick-slide{
+    transition-duration: 0.5s;
+    border-radius: 20px;
+    margin-left: 2.45px;
+    height: 152px;
+    width: 271px;
+    outline: 0;
+  }
+  
+  .slick-slide:hover{
+    transform: scale(1.02);
+    border-radius: 25px;
+    opacity: 0.8;
+  }
+  
+  .button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    height: 152px;
+    width: 300px;
+  
+  }

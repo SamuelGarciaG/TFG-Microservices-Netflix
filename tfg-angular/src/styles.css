@@ -1,0 +1,12 @@
+html {
+    background-image: url("assets/bgimage.jpg");
+    background-position: left;
+    background-attachment: fixed;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+.notes1{
+    padding-top: 80px;
+    margin-left: 46px;
+}

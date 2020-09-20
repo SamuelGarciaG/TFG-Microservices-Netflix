@@ -1,0 +1,35 @@
+<ng-container *ngIf="reviews">
+    <div>
+        <img class="slide" src="{{series.urlimg}}">
+    </div>
+    <div>
+        <p class="title">{{series.name}}</p>
+    </div>
+    <div>
+        <p class="summary">{{series.summary}}</p>
+    </div>
+    <a class="active" (click)="NewTab()">Watch Trailer</a>
+    <div>
+        <p class="info">{{series.duration}} min per episode • {{series.genre}} •
+            {{series.seasons}} seasons • {{series.episodes}} episodes per season •
+            {{series.year}} • {{series.rating}}/10</p>
+    </div>
+    <br />
+    <br />
+    <h3>Users reviews section</h3>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <input type="text" class="review" formControlName="review" placeholder="What do you think about {{series.name}}">
+        <br />
+        <input type="number" class="rating" formControlName="rating" placeholder="your rating">
+        <br />
+        <button class="postreview">
+            <span>Post your review</span>
+        </button>
+    </form>
+    <br />
+    <div *ngFor='let review of reviews' class="reviews">
+        <p> Hola soy {{review.user}}</p>
+        <p> {{review.comment}} </p>
+        <br />
+    </div>
+</ng-container>

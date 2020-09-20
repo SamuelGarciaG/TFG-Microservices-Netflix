@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<input class="searchBar" placeholder="Enter title or genre" 
+[(ngModel)]="searchTerm" (ngModelChange)="onSearchTermChange()" />
+
+<section>
+    <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div *ngFor="let results of resultsArray"[@fadeIn]>
+          <mat-card class="slide">
+            <button class="button" (click)="goTo(results)">
+              <img mat-card-image src="{{results.urlimg}}"/>
+            </button>
+          </mat-card>
+        </div>
+      </div>
+
+</section>
