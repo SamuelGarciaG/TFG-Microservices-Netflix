@@ -5,6 +5,11 @@ server:
   port: 7000
 zuul:
   routes:
+      serv-auth:
+        path: /auth/**
+        serviceId: auth-service
+        sensitive-headers: Cookie,Set-Cookie  
+        strip-prefix: false
       serv-films: 
         path: /films-service/** 
         serviceId: films-service
@@ -17,7 +22,6 @@ zuul:
       serv-review:
         path: /review-service/**
         serviceId: review-service
-
 eureka:                  
   client:
     serviceUrl:

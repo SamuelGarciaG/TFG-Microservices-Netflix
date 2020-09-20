@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from "@angular/material/card";
@@ -18,6 +18,8 @@ import { SearchComponent } from './components/search/search.component';
 import { FilmDetailsComponent } from './components/film-details/film-details.component';
 import { SeriesDetailsComponent } from './components/series-details/series-details.component';
 import { SeriesComponent } from './components/series/series.component';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { BasicAuthHtppInterceptorService } from './services/BasicAuthHtppInterceptorService';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { SeriesComponent } from './components/series/series.component';
     SearchComponent,
     FilmDetailsComponent,
     SeriesDetailsComponent,
-    SeriesComponent
+    SeriesComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,9 @@ import { SeriesComponent } from './components/series/series.component';
     MatCardModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS, useClass:BasicAuthHtppInterceptorService, multi:true 
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

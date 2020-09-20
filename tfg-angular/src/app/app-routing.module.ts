@@ -6,10 +6,12 @@ import { FilmDetailsComponent } from './components/film-details/film-details.com
 import { SeriesComponent } from './components/series/series.component';
 import { SeriesDetailsComponent } from './components/series-details/series-details.component';
 import { SearchComponent } from './components/search/search.component';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: AuthenticationComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'films', component: FilmsComponent },
   { path: 'series', component: SeriesComponent },
   { path: 'film-details/:id', component: FilmDetailsComponent },
