@@ -37,5 +37,10 @@ public class FilmController {
 		return service.getFilmsByGenre(genre);
 	}
 	
+	@GetMapping (value ="films/top", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Film> getTopFilms () {
+		return service.getTopFilms();
+	}
+	
 
 }

@@ -1,3 +1,11 @@
 .cont{
-    margin-top: 200px;
+    margin-top: 255px;
+}
+
+.logo{
+    position: absolute;
+    top: 60px;
+    right: 120px;
+    width: 400px;
+    height: 400px;
 }

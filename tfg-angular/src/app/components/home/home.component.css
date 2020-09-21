@@ -7,11 +7,10 @@
 .notes{
   margin-left: 46px;
 }
-
   
   .slick-slide{
     transition-duration: 0.5s;
-    border-radius: 20px;
+    border-radius: 4px;
     margin-left: 2.45px;
     height: 152px;
     width: 271px;
@@ -20,7 +19,7 @@
   
   .slick-slide:hover{
     transform: scale(1.02);
-    border-radius: 25px;
+    border-radius: 7px;
     opacity: 0.8;
   }
   

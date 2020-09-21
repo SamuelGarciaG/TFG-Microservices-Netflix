@@ -1,6 +1,7 @@
 package service;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -26,6 +27,7 @@ public class ServiceSeriesImpl implements ServiceSeries {
 	@Override
 	public List<Series> getSeries() {
 		List<Series> series = dao.getSeries();
+		Collections.shuffle(series, new Random(System.nanoTime()));
 		return series;
 	}
 
@@ -53,5 +55,13 @@ public class ServiceSeriesImpl implements ServiceSeries {
 				.collect(Collectors.toList());
 		Collections.shuffle(series, new Random(System.nanoTime()));
 		return series;
+	}
+
+	@Override
+	public List<Series> getTopSeries() {
+		List<Series> series = dao.getSeries();
+		series.sort(Comparator.comparingDouble(Series::getRating)
+	              .reversed());
+		return series.subList(0, 9);
 	}
 }

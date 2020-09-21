@@ -1,7 +1,23 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <body>
-    <h3 class = "notes1">Top Films</h3>
+    <h3 class = "notes1" [@fadeIn]>Top 10 Films</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let film of filmsTopArray' class="slide">
+            <button class="button" (click)="goToFilm(film)">
+                <img class="slick-slide" src="{{film.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <h3 class = "notes" [@fadeIn]>Top 10 Series</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let series of seriesTopArray' class="slide">
+            <button class="button" (click)="goToSeries(series)">
+                <img class="slick-slide" src="{{series.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <h3 class = "notes" [@fadeIn]>All Films</h3>
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor='let film of filmsArray' class="slide">
             <button class="button" (click)="goToFilm(film)">
@@ -9,7 +25,7 @@
             </button>
         </div>
     </ngx-slick-carousel>
-    <h3 class = "notes">Top Series</h3>
+    <h3 class = "notes" [@fadeIn]>All Series</h3>
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor='let series of seriesArray' class="slide">
             <button class="button" (click)="goToSeries(series)">
@@ -17,6 +33,5 @@
             </button>
         </div>
     </ngx-slick-carousel>
-
     <router-outlet></router-outlet>
 </body>

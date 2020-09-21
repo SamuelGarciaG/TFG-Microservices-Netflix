@@ -15,6 +15,11 @@ export class SeriesService {
     return this.http.get<Series[]>(this.seriesUrl);
   }
 
+  getTopSeries(): Observable<Series[]> {
+    const url = `${this.seriesUrl}/top`;
+    return this.http.get<Series[]>(url);
+  }
+
   getSeriesById(id: number): Observable<Series> {
     const url = `${this.seriesUrl}/${id}`;
     return this.http.get<Series>(url);

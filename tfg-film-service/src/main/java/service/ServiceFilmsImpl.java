@@ -1,6 +1,7 @@
 package service;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -27,6 +28,7 @@ public class ServiceFilmsImpl implements ServiceFilms{
 	@Override
 	public List<Film> getFilms() {
 		List<Film> films = dao.getFilms();
+		Collections.shuffle(films, new Random(System.nanoTime()));
 		return films;
 	}
 	
@@ -55,7 +57,14 @@ public class ServiceFilmsImpl implements ServiceFilms{
 		film.setReviews(reviews);
 		return film;
 	}
-
+	
+	@Override
+	public List<Film> getTopFilms() {
+		List<Film> films = dao.getFilms();
+		films.sort(Comparator.comparingDouble(Film::getRating)
+                .reversed());
+		return films.subList(0, 9);
+	}
 	
 
 }

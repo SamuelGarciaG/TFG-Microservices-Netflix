@@ -3,15 +3,21 @@
     width: 100vw;
     height: 55px;
     padding: 10px 36px;
-    background-color: rgba(33, 37, 82, 0.897);
+    background-color: rgba(0, 0, 0, 0.932);
     position: fixed;
     z-index: 6;
     left: 0px;
     top: 0px;
   }
+  .logo{
+    width: 100px;
+    float: left;
+    margin-top: -22px;
+  }
   .username{
-    width: 20vw;
-    margin-left: 1050px;
+    width: 10vw;
+  right: 100px;
+  position: absolute;
   }
   
   .navbar a {

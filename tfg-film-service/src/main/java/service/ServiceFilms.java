@@ -10,5 +10,6 @@ public interface ServiceFilms {
 	public Film getFilmById(Integer id);
 	public Film getFilmByName(String name);
 	public List<Film> getFilmsByGenre(String genre);
+	public List<Film> getTopFilms();
 	
 }

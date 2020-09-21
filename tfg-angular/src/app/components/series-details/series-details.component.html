@@ -16,20 +16,25 @@
     </div>
     <br />
     <br />
-    <h3>Users reviews section</h3>
-    <form [formGroup]="form" (ngSubmit)="submitForm()">
-        <input type="text" class="review" formControlName="review" placeholder="What do you think about {{series.name}}">
+    <div class="usersection">
+        <hr class= "separator">  
+        <br/>
+        <h3 class="title3">Users reviews section</h3>
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <input type="text" class="review" formControlName="review"
+                placeholder="What do you think about {{series.name}}">
+            <br />
+            <input type="number" class="rating" formControlName="rating" placeholder="your rating">
+            <br />
+            <button class="postreview">
+                <span>Post your review</span>
+            </button>
+        </form>
         <br />
-        <input type="number" class="rating" formControlName="rating" placeholder="your rating">
-        <br />
-        <button class="postreview">
-            <span>Post your review</span>
-        </button>
-    </form>
-    <br />
-    <div *ngFor='let review of reviews' class="reviews">
-        <p> Hola soy {{review.user}}</p>
-        <p> {{review.comment}} </p>
-        <br />
+        <div *ngFor='let review of reviews' class="reviews">
+            <p class= "userreviewname">{{review.user}}'s review</p>
+            <p class="reviewrating"> {{review.rating}}/10</p>
+            <p class="reviewtext"> {{review.comment}} </p>
+        </div>
     </div>
 </ng-container>

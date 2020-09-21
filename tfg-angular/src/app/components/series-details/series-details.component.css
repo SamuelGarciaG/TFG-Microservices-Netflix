@@ -13,10 +13,12 @@
     font-size: 40px;
 }
 .summary{
-    position: absolute;
-    width: 30%;
-    top: 180px;
-    right: 250px;
+  position: absolute;
+  width: 30%;
+  top: 180px;
+  right: 185px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .info{
@@ -26,25 +28,72 @@
 }
 
 .active {
-    background-color: rgba(255, 255, 255, 0.404);
-    position: absolute;
-    border-radius: 5px;
-    top: 485px;
-    right: 250px;
-    color: black;
-    cursor: pointer;
-    border: 2px solid rgb(49, 49, 49);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition-duration: 0.5s;
-  }
+  background-color: rgba(255, 255, 255, 0.404);
+  position: absolute;
+  border-radius: 5px;
+  top: 445px;
+  right: 300px;
+  color: black;
+  cursor: pointer;
+  border: 2px solid rgb(49, 49, 49);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
 
   .active:hover{
     background-color: rgb(196, 196, 196);
   }
 
+
+  .usersection{
+    margin-left: 30px;
+  }
+  .title3{
+    color: rgb(102, 209, 60);
+  }
+
+  .separator{
+    size:2;
+    margin-left:0px;
+     width:95%;
+      color:"grey";
+  }
   .review{
     width: 50%;
+    height: 40px;
+    font-size: 15px;
+  }
+  .reviews{
+    border: white;
+    border-style: double;
+    background: rgba(87, 212, 37, 0.384);
+    margin-right: 200px;
+    min-height: 80px;
+    height:auto;
+    margin-bottom: 10px;
+  }
+
+  .userreviewname{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .reviewrating{
+    position: absolute;
+    margin-top: 10px;
+    right: 300px;
+  }
+  .reviewtext{
+    position: absolute;
+    text-align: justify;
+    text-justify: inter-word;
+    width:77%;
+    margin-top: 45px;
+    margin-left: 10px;
+    font-family: "Arial";
+    font-size: 12px;
+    font-weight: normal !important;
   }

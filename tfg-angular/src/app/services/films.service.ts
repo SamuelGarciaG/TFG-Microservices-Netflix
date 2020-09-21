@@ -15,6 +15,11 @@ export class FilmService {
     return this.http.get<Film[]>(this.filmsUrl);
   }
 
+  getTopFilms(): Observable<Film[]> {
+    const url = `${this.filmsUrl}/top`;
+    return this.http.get<Film[]>(url);
+  }
+
   getFilmById(id: number): Observable<Film> {
     const url = `${this.filmsUrl}/${id}`;
     return this.http.get<Film>(url);

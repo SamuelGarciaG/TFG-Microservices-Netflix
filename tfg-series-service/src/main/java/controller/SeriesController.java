@@ -38,6 +38,11 @@ public class SeriesController {
 		return service.getSeriesByGenre(genre);
 	}
 	
+	@GetMapping (value ="series/top", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Series> getTopSeries () {
+		return service.getTopSeries();
+	}
+	
 
 
 }

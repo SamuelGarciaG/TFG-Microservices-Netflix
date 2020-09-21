@@ -7,9 +7,9 @@
 }
 
 .mat-card-image:first-child{
-  border-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
   height: 152px;
   width: 271px;
   transition-duration: 0.5s;
@@ -17,7 +17,7 @@
 
 .mat-card-image:first-child:hover{
   transform: scale(1.02);
-  border-radius: 25px;
+  border-radius: 7px;
   opacity: 0.8;
 }
 

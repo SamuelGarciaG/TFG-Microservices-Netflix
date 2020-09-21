@@ -9,4 +9,5 @@ public interface ServiceSeries {
 	public Series getSeriesByName(String name);
 	public Series getSeriesById(Integer id);
 	public List<Series> getSeriesByGenre(String genre);
+	public List<Series> getTopSeries();
 }

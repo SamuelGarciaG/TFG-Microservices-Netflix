@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <section>
-    <h3 class = "notes1">All Series</h3>
+    <h3 class = "notes1" [@fadeIn]>All Series</h3>
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor='let series of seriesArray' class="slide">
             <button class="button" (click)="goTo(series)">
@@ -9,9 +9,41 @@
             </button>
         </div>
     </ngx-slick-carousel>
-    <h3 class = "notes">Drama Series</h3>
+    <h3 class = "notes" [@fadeIn]>Drama Series</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let series of seriesDramaArray' class="slide">
+            <button class="button" (click)="goTo(series)">
+                <img class="slick-slide" src="{{series.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <h3 class = "notes" [@fadeIn]>Action Series</h3>
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor='let series of seriesActionArray' class="slide">
+            <button class="button" (click)="goTo(series)">
+                <img class="slick-slide" src="{{series.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <h3 class = "notes" [@fadeIn]>Crime Series</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let series of seriesCrimeArray' class="slide">
+            <button class="button" (click)="goTo(series)">
+                <img class="slick-slide" src="{{series.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <h3 class = "notes" [@fadeIn]>Sci-Fi Series</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let series of seriesSciFiArray' class="slide">
+            <button class="button" (click)="goTo(series)">
+                <img class="slick-slide" src="{{series.urlimg}}">
+            </button>
+        </div>
+    </ngx-slick-carousel>
+    <h3 class = "notes" [@fadeIn]>Comedy Series</h3>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor='let series of seriesComedyArray' class="slide">
             <button class="button" (click)="goTo(series)">
                 <img class="slick-slide" src="{{series.urlimg}}">
             </button>
