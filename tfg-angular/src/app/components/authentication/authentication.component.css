@@ -9,3 +9,8 @@
     width: 400px;
     height: 400px;
 }
+
+.error{
+    font-size: 10px;
+    color: red;
+}

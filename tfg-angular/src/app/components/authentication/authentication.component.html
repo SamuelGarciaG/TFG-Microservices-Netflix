@@ -6,6 +6,7 @@
     <button (click)=checkLogin() class="btn btn-success">
       Login
     </button>
+    <p *ngIf="invalidLogin" class="error"> Try again</p>
 </div>
 <div>
   <img class="logo" src="../../../assets/logo.png"[@fadeIn]>
