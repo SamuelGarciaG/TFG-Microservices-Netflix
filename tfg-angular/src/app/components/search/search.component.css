@@ -1,9 +1,9 @@
 .content{
-  width: 97%;
+  width: 95%;
   left: 3%;
   position: absolute;
   padding-top: 200px;
-  justify-content: left;
+  justify-content: center;
 }
 
 .mat-card-image:first-child{
