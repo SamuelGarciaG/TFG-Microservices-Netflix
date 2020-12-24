@@ -3,16 +3,16 @@ spring:
     name: review-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/reviews?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3308/reviews?serverTimezone=UTC
     username: root
-    password: 62216221
+    password: secret
   jpa:
     hibernate:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 server: 
-  port: 8002
+  port: 8003
 # Config de el servidor  
 eureka: 
   client:

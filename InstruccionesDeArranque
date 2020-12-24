@@ -1,5 +1,0 @@
-1- Correr el Servidor Eureka como aplicación Spring Boot en un IDE que tenga la extensión de Spring Boot
-
-2- Resto de servicios, igual que Eureka pero una vez este esté ejecutándose
-
-3- Ir al directorio en el que esté ubicado el tfg-angular y ejecutar el comando (debemos tener instalado Angular CLI): ng serve --open

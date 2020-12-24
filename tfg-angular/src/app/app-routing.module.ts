@@ -10,8 +10,7 @@ import { AuthenticationComponent } from './components/authentication/authenticat
 
 
 const routes: Routes = [
-  { path: '', component: AuthenticationComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'films', component: FilmsComponent },
   { path: 'series', component: SeriesComponent },
   { path: 'film-details/:id', component: FilmDetailsComponent },
