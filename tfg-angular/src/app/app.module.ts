@@ -31,7 +31,8 @@ import { BasicAuthHtppInterceptorService } from './services/BasicAuthHtppInterce
     SearchComponent,
     FilmDetailsComponent,
     SeriesDetailsComponent,
-    SeriesComponent
+    SeriesComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,9 @@ import { BasicAuthHtppInterceptorService } from './services/BasicAuthHtppInterce
     MatCardModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS, useClass:BasicAuthHtppInterceptorService, multi:true 
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
