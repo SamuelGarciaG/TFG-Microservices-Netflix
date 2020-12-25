@@ -45,9 +45,7 @@ import { BasicAuthHtppInterceptorService } from './services/BasicAuthHtppInterce
     MatCardModule,
     BrowserAnimationsModule
   ],
-  providers: [{
-    provide:HTTP_INTERCEPTORS, useClass:BasicAuthHtppInterceptorService, multi:true 
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
