@@ -57,4 +57,4 @@ Una vez se abra en el navegador, podrás curiosear todo lo que quieras en mi pro
 
 Si has llegado hasta aquí, no dudes en contactar conmigo si quieres consultarme cualquier cosa. Tienes mi e-mail en mi perfil.
 
-Muchas fracias por tu tiempo y por llegar hasta el final!
+Muchas gracias por tu tiempo y por llegar hasta el final!
