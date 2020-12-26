@@ -6,6 +6,10 @@ En este TFG se revisa la arquitectura monolítica, la de microservicios y se las
 
 Además de toda esta revisión biblográfica sobre los microservicios, se desarrolló un proyecto para poder ver esta arquitectura en funcionamiento. Es una página web que sirve como un foro de películas, en las que podemos ver un catálogo de películas, datos de las mismas y opiniones de algunos usuarios. De nuevo, para ver más detalles sobre la aplicación, se puede hacer en la <a href="https://github.com/SamuelGarciaG/TFG-Microservices-Netflix/blob/master/Trabajo%20de%20Fin%20de%20Grado%20Samuel%20Garc%C3%ADa.pdf" target="_blank">memoria</a>.
 
+La aplicación consta de la siguiente arquitectura:
+
+<img title="Architecture TFG" src="https://user-images.githubusercontent.com/47883616/103152318-2ca37900-4787-11eb-8e93-a1ec6155f4f2.png">
+
 ## Proceso de despliegue
 
 Para desplegar el proyecto, hay que tener instalado previamente un IDE que soporte Java, <a href="https://www.docker.com/" target="_blank">Docker</a>, <a href="https://nodejs.org/en/" target="_blank">Node</a> y <a href="https://cli.angular.io/" target="_blank">AngularCLI</a>.
